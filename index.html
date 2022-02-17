@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+	<title>Nasza historia</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<script>
+    confirm("Czy chcesz otrzymać walentynkowy prezent??");
+</script>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments"> **</span><br />
+				<span class="space"/><span class="comments">Dzisiaj nasze święto Zakochanych</span><br />
+				<span class="space"/><span class="comments">Obchodzimy to już drugi raz i mam nadzieję że nie ostatni</span><br />
+				<span class="space"/><span class="keyword">Mam dla Ciebie krótką historyjkę</span><br />
+				Ja jestem<span class="keyword"></span> Twoim:<span class="string">chłopakiem</span>;<br />
+				Ty jesteś <span class="keyword"></span>Moją:<span class="string">dziewczyną</span>;<br /><br>
+				<span class="comments">Pewnego Dnia spotkało się dwoje młodych ludzi. </span><br />
+				(był to maj 2020)<br />
+				<span class="comments">Poszli do Joanny, kupili sobie soczek i jedzonko</span><br />
+				(bardzo dobre swoją drogą)<br /> 
+				<span class="comments">zaczeli konsumować, soczek był dobry</span><br />
+				(naprawde)<br />
+				<span class="comments">Gdy zachodziło słońce za trzciną</span><br />
+				( Ta pani była
+				jeszcze piękniejsza w świetle słońca)<br />
+				<span class="comments">Wtedy wyjął ładne pudełeczko, a w nim wiedziała już co było.</span><br />
+				<span class="comments"> </span> (tak był to stefan który zginął śmiercią tragiczną)<br />
+				<span class="keyword">Kubi</span> pokochał wtedy <span class="keyword">Bubke</span>;<br />
+				<span class="comments">Stworzyli wtedy</span><span class="keyword"> jedność <br /><br>
+				<span class="comments"> Co prawda</span><span class="string">,,pierścionek"</span><br> zginął<br /></span><br />
+				<span class="comments">Ale miłość pozostała</span><br />
+				<span class="comments">i <br>mam nadzije że pozostanie <br>jeszcze dużo lat</span><br />
+				<span class="placeholder"/>A to bardzo dużo czasu<br />
+				<br />
+				<span class="comments">Kocham cię mój skarbkuu!</span><br />
+				<span class="comments"> **</span><br />
+			</div>  <br><br>  <br><br> <br>
+			  
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Mój whole świecie, zakochany jestem w Tobie już: <br>
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Kocham Cię bardzo mocno<3. <br/>
+						<div class="signature">~ Kubi</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		&nbsp &nbsp &nbsp <p style="text-align:center">.<a href="index1.html"><img src="obrazek.jpg" alt="Tutaj jest obrazek" width="500" height="600"> </a></p>
+		<p style="text-align:right">.<a href="index2.html"><img src="siemanko.png" alt="Tutaj jest obrazek" width="50" height="50" > </a></p>
+		<div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
+			Copyright © 2022 <a href='http://kubsi.me'>kubsi.me</a> 2021-2022
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2020, 05, 27);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			},72000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 1500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+	 <audio src="siema.mp3" autoplay loop></audio>
+</body>
+</html>
